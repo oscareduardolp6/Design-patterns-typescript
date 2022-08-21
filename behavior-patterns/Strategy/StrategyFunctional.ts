@@ -10,4 +10,5 @@ const CarStrategy: RouteStrategy = (origin, destiny) => []
 const origin: Coordinate = { x: 5, y: 7 }
 const destiny: Coordinate = {x: 7, y: 5 }
 
-const route = CarStrategy(origin, destiny) 
+let route: ReturnType<RouteStrategy> = CarStrategy(origin, destiny) 
+route = WalkingStrategy(origin, destiny); 
